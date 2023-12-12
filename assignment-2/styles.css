@@ -1,0 +1,293 @@
+/* Reset some default styles for the body */
+/* Default styles for all screen sizes */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0px 370px;
+    font-family: Arial, sans-serif;
+    background-color:rgb(56, 55, 3);
+    margin:auto;
+    width:100%;
+}
+
+h1, h2, h3, p {
+    font-family: 'Roboto', sans-serif;
+}
+/* Header styles */
+header {
+    background-color: #caed08;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin: 10px;
+    width: 97.5%;
+}
+header img{
+    position:absolute;
+    top:28px;
+    left:397px;
+    width:116px;
+    height:105px;
+}
+.Acourse{
+    display: flex;
+    margin: auto;
+    width: 2000px;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #333;
+    overflow: hidden;
+    padding:0px;
+    margin:10px;
+    width:100%;
+    position:sticky;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for background-color and color */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+Main content layout */
+ #about{
+    width:1400px;
+    height: 700px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+.Acourse ul{
+    list-style-type:none;
+    padding:0px;
+}
+.Acourse ul li{
+    padding:0px 0px;
+}
+.Acourse ul ::marker{
+    padding:0px 2px;
+}
+#instructors{
+    width:100%;
+    height: 450px;
+    display: block;
+    margin: auto;
+    justify-content: center;
+    padding:20px;
+    margin:10px;
+    border:1px solid #ddd;
+}
+#outline{
+    width:100%;
+    height: 700px;
+    display: block;
+    margin: auto;
+    justify-content: center;
+    padding:20px;
+    margin:10px;
+}
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+}
+
+.column {
+    margin: 10px;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    max-width: 100%; /* Ensure content doesn't overflow on smaller screens */
+}
+
+/* Instructor cards */
+.instructor-card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.instructor-card:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Change the box shadow on hover */
+}
+
+.instructor-card img {
+    max-width: 10%;
+    height: auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/* Styles for screens with a maximum width of 768px (typical for smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    /* Adjust other styles as needed for smaller screens */
+    header {
+        padding: 10px;
+    }
+    nav a {
+        padding: 10px;
+    }
+    /* Adjust the layout of sections for smaller screens */
+    .column-container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+    .column {
+        width: 100%; /* Full width for columns on small screens */
+    }
+    .instructor-card {
+        margin-bottom: 20px; /* Add space between instructor cards */
+    }
+}
+/* Add this CSS to your existing stylesheet or in a <style> tag within your HTML file */
+.contact-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f89;
+}
+.section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section ul, .section ol {
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.section .instructor-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section .instructor-card h3 {
+    font-size: 20px;
+    color: #0077b6;
+}
+
+.section .instructor-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styles for screens with a minimum width of 769px (typical for desktops and tablets) */
+@media (min-width: 769px) {
+    body {
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+    /* Adjust other styles as needed for larger screens */
+    header {
+        padding: 20px;
+    }
+    nav a {
+        padding: 9px 135px;
+    }
+    /* Reset the layout of sections for larger screens */
+    .column-container {
+        flex-direction: row; /* Display columns side by side */
+    }
+    .column {
+        width: 100%; /* Two columns, each taking 50% of the width */
+    }
+    .instructor-card {
+        margin-bottom: 0; /* Remove space between instructor cards */
+    }
+}

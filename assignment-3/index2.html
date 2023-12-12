@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color:antiquewhite; /* Change this to your desired background color */
+            padding: 20px; /* Padding around the container */
+            border-radius: 5px; /* Optional: Add rounded corners to the form */
+            width: 600px; /* Increased width */
+            height: 300px; /* Increased height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 18px;
+        }
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            display: block; /* Ensure labels stack vertically */
+            margin-bottom: 10px; /* Add space between label and input */
+        }
+        .input-container {
+            position: relative;
+            margin-bottom: 20px; /* Add space between input and underline */
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 20px;
+        }
+        input[type="password"]:focus ~ .underline {
+            width: 100%;
+            background-color: #007BFF;
+        }
+        .underline {
+            position:relative;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: transparent;
+            transition: width 0.3s ease;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 24px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #136ed0;
+        }
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="passwordForm">
+            <label for="password">Password:</label>
+            <div class="input-container">
+                <input type="password" id="password" name="password" required>
+                <div class="underline"></div>
+            </div>
+            <button type="button" id="checkButton">Check Password</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

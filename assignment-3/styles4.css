@@ -1,0 +1,85 @@
+/* Reset some default styles for simplicity */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #fbef05;
+    color: #09c3ed;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:hover{
+    color: #ebebeb;
+}
+nav ul li:last-child {
+    margin-right: 0;
+    color: aqua;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+footer{
+    width: 160px;
+    height: 22px;
+    text-align: center;
+    background-color: #000000;
+    color: #f2f2f2;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 1rem;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
