@@ -1,0 +1,54 @@
+db.games sapReduce(function Ofif(this.scores) for(var i=0; i<this.scores.length; i++){var player = this. scores[i].name;var score = this scores[i].score;enit(player, score);}}, function (key, values) freturn Array, sun(values);), fout: "player scores })
+(result: player scores, ok: 1)
+games> db.player scores.find()
+
+
+db.student.insertMany ([
+{
+_id: 1,
+firstName: "Candice",
+lastName: "Mark",
+age: 22,
+projectMarks: 99,
+examsMarks: 70,
+assignmentMarks: 10,
+status: [{
+"course": "Python", "batch": 2023}]
+},
+{
+_id: 2,
+firstName: "Dave",
+lastName: "James"
+age: 21,
+projectMarks: 99,
+examsMarks: 70,
+assignmentMarks: 10,
+status: [{
+"course": "MongoDB", "batch": 2023}]
+},
+{
+_id: 3,
+firstName: "Ivan",
+lastName: "Seth",
+age: 24,
+projectMarks: 99,
+examsMarks: 70,
+assignmentMarks: 10,
+status: [{
+"course": "Java", "batch": 2022}]
+}
+])
+
+// aggregate_function 
+db.student.aggregate([
+{ $group: { _id: { firstName: "$firstName", lastName: "$lastName" },
+age:{ $sum: 1 }
+}
+}
+])
+
+
+db.student.aggregate([ {$match: {projectMarks:{ $eq: 99}}}, {$group: {_id: "$age", assignmentMarks:{$sum: 1}}}])
+
+db.student.aggregate([{$unwind : "$status" },{ $group: {_id :"$status.course", Batch_No : { $sum :"$status.batch"}}}])
+
